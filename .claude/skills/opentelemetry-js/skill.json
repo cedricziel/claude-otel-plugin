@@ -1,0 +1,46 @@
+{
+  "name": "opentelemetry-js",
+  "version": "1.0.0",
+  "description": "Expert knowledge for instrumenting JavaScript, TypeScript, React, and Node.js applications with OpenTelemetry. Provides guidance on manual and automatic instrumentation, SDK configuration, and best practices for traces, metrics, and logs in the JavaScript ecosystem.",
+  "capabilities": [
+    "Manual instrumentation with OpenTelemetry JavaScript API",
+    "Automatic instrumentation for Node.js applications",
+    "SDK configuration and setup for Node.js and browsers",
+    "Trace creation and context propagation",
+    "Metric collection and recording",
+    "Browser instrumentation for frontend applications",
+    "React and Next.js instrumentation",
+    "Express.js and other web framework instrumentation",
+    "HTTP client and server instrumentation",
+    "Database instrumentation (PostgreSQL, MongoDB, MySQL, etc.)",
+    "GraphQL instrumentation",
+    "Log correlation and integration",
+    "Exporter configuration (OTLP, Jaeger, Zipkin, etc.)",
+    "Resource detection and attributes",
+    "Sampling strategies",
+    "Baggage and context management",
+    "TypeScript support and type definitions"
+  ],
+  "dependencies": {
+    "npm": [
+      "@opentelemetry/api",
+      "@opentelemetry/sdk-node",
+      "@opentelemetry/auto-instrumentations-node",
+      "@opentelemetry/instrumentation",
+      "@opentelemetry/sdk-trace-node",
+      "@opentelemetry/sdk-trace-web",
+      "@opentelemetry/sdk-metrics",
+      "@opentelemetry/exporter-trace-otlp-http",
+      "@opentelemetry/exporter-trace-otlp-grpc",
+      "@opentelemetry/exporter-metrics-otlp-http",
+      "@opentelemetry/instrumentation-http",
+      "@opentelemetry/instrumentation-express",
+      "@opentelemetry/instrumentation-react-dom"
+    ]
+  },
+  "resources": [
+    "https://opentelemetry.io/docs/languages/js/",
+    "https://github.com/open-telemetry/opentelemetry-js",
+    "https://github.com/open-telemetry/opentelemetry-js-contrib"
+  ]
+}

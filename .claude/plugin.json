@@ -1,7 +1,7 @@
 {
   "name": "opentelemetry-instrumentation",
   "version": "1.0.0",
-  "description": "Claude plugin for OpenTelemetry instrumentation guidance. Helps developers instrument their applications for observability using OpenTelemetry SDKs in Java and Go.",
+  "description": "Claude plugin for OpenTelemetry instrumentation guidance. Helps developers instrument their applications for observability using OpenTelemetry SDKs in Java, Go, and JavaScript/TypeScript.",
   "author": {
     "name": "Cedric Ziel",
     "url": "https://github.com/cedricziel/claude-otel-plugin"
@@ -16,6 +16,11 @@
       "name": "opentelemetry-go",
       "description": "Expert knowledge for instrumenting Go applications with OpenTelemetry",
       "path": "skills/opentelemetry-go"
+    },
+    {
+      "name": "opentelemetry-js",
+      "description": "Expert knowledge for instrumenting JavaScript, TypeScript, React, and Node.js applications with OpenTelemetry",
+      "path": "skills/opentelemetry-js"
     }
   ],
   "marketplace": {
@@ -30,6 +35,10 @@
       "logging",
       "java",
       "go",
+      "javascript",
+      "typescript",
+      "nodejs",
+      "react",
       "instrumentation",
       "monitoring"
     ],
@@ -45,7 +54,13 @@
       "monitoring",
       "instrumentation",
       "java",
-      "go"
+      "go",
+      "javascript",
+      "typescript",
+      "nodejs",
+      "react",
+      "nextjs",
+      "express"
     ]
   }
 }
