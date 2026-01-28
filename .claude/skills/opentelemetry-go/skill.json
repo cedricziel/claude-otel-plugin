@@ -1,0 +1,32 @@
+{
+  "name": "opentelemetry-go",
+  "version": "1.0.0",
+  "description": "Expert knowledge for instrumenting Go applications with OpenTelemetry. Provides guidance on manual instrumentation, SDK configuration, and best practices for traces, metrics, and logs in Go.",
+  "capabilities": [
+    "Manual instrumentation with OpenTelemetry Go API",
+    "SDK configuration and setup",
+    "Trace creation and context propagation",
+    "Metric collection and recording",
+    "Exporter configuration (OTLP, Jaeger, Prometheus, etc.)",
+    "Resource detection and attributes",
+    "Sampling strategies",
+    "Baggage and context management",
+    "HTTP/gRPC middleware instrumentation",
+    "Database instrumentation"
+  ],
+  "dependencies": {
+    "go_modules": [
+      "go.opentelemetry.io/otel",
+      "go.opentelemetry.io/otel/sdk",
+      "go.opentelemetry.io/otel/exporters/otlp/otlptrace",
+      "go.opentelemetry.io/otel/exporters/otlp/otlpmetric",
+      "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+      "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
+    ]
+  },
+  "resources": [
+    "https://opentelemetry.io/docs/languages/go/",
+    "https://github.com/open-telemetry/opentelemetry-go",
+    "https://github.com/open-telemetry/opentelemetry-go-contrib"
+  ]
+}
