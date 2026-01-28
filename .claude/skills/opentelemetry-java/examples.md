@@ -1,5 +1,7 @@
 # OpenTelemetry Java Examples
 
+> **Note**: These examples focus on key instrumentation patterns. Some imports and helper classes are abbreviated or omitted for clarity. In production code, ensure all necessary imports are included and helper classes are properly defined.
+
 ## Example 1: Simple HTTP Service with Manual Instrumentation
 
 ```java

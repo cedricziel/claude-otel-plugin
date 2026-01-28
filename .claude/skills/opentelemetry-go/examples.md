@@ -1,5 +1,7 @@
 # OpenTelemetry Go Examples
 
+> **Note**: These examples focus on key instrumentation patterns. Some imports and helper functions are abbreviated or omitted for clarity. In production code, ensure all necessary imports are included and helper functions are properly defined.
+
 ## Example 1: Complete HTTP Service with Traces and Metrics
 
 ```go
