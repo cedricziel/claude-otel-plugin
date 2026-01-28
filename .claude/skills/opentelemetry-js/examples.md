@@ -52,6 +52,7 @@ module.exports = sdk;
 require('./tracing'); // Must be first import
 
 const express = require('express');
+const opentelemetry = require('@opentelemetry/api');
 const { trace, metrics, SpanStatusCode } = require('@opentelemetry/api');
 
 const app = express();
@@ -136,10 +137,9 @@ app.post('/users', async (req, res) => {
     
     span.setAttribute('user.email', email);
     
-    // Validate input
-    const validationSpan = tracer.startSpan('validate-user-input', {
-      parent: span,
-    });
+    // Validate input - using context to establish parent-child relationship
+    const ctx = opentelemetry.trace.setSpan(opentelemetry.context.active(), span);
+    const validationSpan = tracer.startSpan('validate-user-input', {}, ctx);
     
     if (!name || !email) {
       validationSpan.setAttribute('validation.failed', true);

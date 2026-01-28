@@ -296,7 +296,7 @@ registerInstrumentations({
 ### React Component Instrumentation
 
 ```javascript
-import { trace } from '@opentelemetry/api';
+import { trace, SpanStatusCode } from '@opentelemetry/api';
 import { useEffect } from 'react';
 
 const tracer = trace.getTracer('react-app');
@@ -403,7 +403,7 @@ module.exports = {
 
 ```typescript
 // pages/api/users/[id].ts
-import { trace } from '@opentelemetry/api';
+import { trace, SpanStatusCode } from '@opentelemetry/api';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const tracer = trace.getTracer('nextjs-api');
