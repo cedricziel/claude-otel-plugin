@@ -96,7 +96,7 @@ Learn more about Claude Code skills at [https://code.claude.com/docs/en/skills](
 
 You can use this plugin in GitHub Actions workflows to automate observability reviews and ensure consistent instrumentation practices across your codebase.
 
-### Automated O11y Reviews
+### Automated Observability Reviews
 
 The plugin can help review pull requests for observability best practices, ensuring that:
 - New endpoints and services are properly instrumented
@@ -105,6 +105,8 @@ The plugin can help review pull requests for observability best practices, ensur
 - Instrumentation follows OpenTelemetry best practices
 
 ### Example GitHub Actions Workflow
+
+Here's an example of how you could integrate the plugin into a GitHub Actions workflow. Note: This assumes a hypothetical Claude Code GitHub Action integration. Adapt this example to your specific CI/CD setup:
 
 Create a `.github/workflows/otel-review.yml` file in your repository:
 
