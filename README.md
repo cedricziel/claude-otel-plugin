@@ -45,7 +45,7 @@ Expert knowledge for instrumenting Rust applications with OpenTelemetry, includi
 
 - Manual instrumentation with OpenTelemetry Rust API
 - SDK configuration and initialization
-- HTTP server and client instrumentation (Axum, Actix, etc.)
+- HTTP server and client instrumentation (Axum, Actix-web, etc.)
 - Integration with the `tracing` crate ecosystem
 - Database instrumentation patterns (SQLx, Diesel)
 - Async runtime integration (Tokio)

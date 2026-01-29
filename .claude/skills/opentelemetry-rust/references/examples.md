@@ -574,7 +574,7 @@ async fn fetch_user(
 ## Example 6: Context Propagation Across Async Tasks
 
 ```rust
-use opentelemetry::{global, Context};
+use opentelemetry::{global, Context, KeyValue};
 use opentelemetry::trace::{TraceContextExt, Tracer};
 use tokio::task;
 

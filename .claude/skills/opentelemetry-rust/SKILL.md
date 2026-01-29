@@ -172,7 +172,7 @@ async fn make_request(url: &str) -> Result<String, Box<dyn std::error::Error>> {
         let mut headers = reqwest::header::HeaderMap::new();
         
         // Inject trace context into headers
-        let propagator = global::get_text_map_propagator(|propagator| {
+        global::get_text_map_propagator(|propagator| {
             propagator.inject_context(&cx, &mut HeaderInjector(&mut headers));
         });
         
@@ -427,9 +427,9 @@ async fn async_operation() {
         // Spawn async task with context
         let handle = task::spawn(async move {
             let tracer = global::tracer("my-service");
-            tracer.in_span("async-child", |_cx| {
+            tracer.in_span("async-child", |_cx| async move {
                 // Do async work
-            });
+            }).await;
         });
         
         handle.await.unwrap();
