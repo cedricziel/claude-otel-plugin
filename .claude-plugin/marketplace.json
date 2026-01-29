@@ -1,0 +1,56 @@
+{
+  "name": "opentelemetry-instrumentation",
+  "version": "1.0.0",
+  "displayName": "OpenTelemetry Instrumentation Assistant",
+  "description": "Claude plugin for OpenTelemetry instrumentation guidance. Helps developers instrument their applications for observability using OpenTelemetry SDKs in Java, Go, Rust, and JavaScript/TypeScript.",
+  "shortDescription": "Expert guidance for instrumenting applications with OpenTelemetry",
+  "author": {
+    "name": "Cedric Ziel",
+    "url": "https://github.com/cedricziel/claude-otel-plugin"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cedricziel/claude-otel-plugin"
+  },
+  "homepage": "https://github.com/cedricziel/claude-otel-plugin",
+  "category": "observability",
+  "tags": [
+    "opentelemetry",
+    "observability",
+    "tracing",
+    "metrics",
+    "logging",
+    "java",
+    "go",
+    "rust",
+    "javascript",
+    "typescript",
+    "nodejs",
+    "react",
+    "instrumentation",
+    "monitoring"
+  ],
+  "icon": "📊",
+  "keywords": [
+    "opentelemetry",
+    "otel",
+    "tracing",
+    "distributed tracing",
+    "metrics",
+    "logs",
+    "observability",
+    "monitoring",
+    "instrumentation",
+    "java",
+    "go",
+    "rust",
+    "javascript",
+    "typescript",
+    "nodejs",
+    "react",
+    "nextjs",
+    "express"
+  ],
+  "pluginPath": ".claude"
+}
