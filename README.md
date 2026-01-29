@@ -1,14 +1,15 @@
 # OpenTelemetry Instrumentation Plugin for Claude Code
 
-A Claude Code plugin that provides expert guidance for instrumenting applications with OpenTelemetry SDKs. This plugin helps developers add observability to their Java and Go applications through traces, metrics, and logs.
+A Claude Code plugin that provides expert guidance for instrumenting applications with OpenTelemetry SDKs. This plugin helps developers add observability to their Java, Go, and JavaScript/TypeScript applications through traces, metrics, and logs.
 
 ## 📊 Features
 
 - **Expert Knowledge**: Comprehensive guidance on OpenTelemetry instrumentation
-- **Multi-Language Support**: Dedicated skills for Java and Go
+- **Multi-Language Support**: Dedicated skills for Java, Go, and JavaScript/TypeScript
 - **Best Practices**: Industry-standard patterns and conventions
 - **Practical Examples**: Real-world code examples and patterns
 - **Complete Coverage**: Manual and automatic instrumentation approaches
+- **Framework Support**: Express, React, Next.js, Spring Boot, and more
 
 ## 🚀 Skills
 
@@ -38,6 +39,21 @@ Expert knowledge for instrumenting Go applications with OpenTelemetry, including
 - Metric collection and recording
 - Best practices for production deployments
 
+### OpenTelemetry JavaScript
+
+Expert knowledge for instrumenting JavaScript and TypeScript applications with OpenTelemetry, including:
+
+- Automatic instrumentation for Node.js applications
+- Manual instrumentation with OpenTelemetry JavaScript API
+- Browser instrumentation for frontend applications
+- React and Next.js instrumentation patterns
+- Express.js and web framework instrumentation
+- SDK configuration for Node.js and browsers
+- HTTP, database, and GraphQL instrumentation
+- Context propagation in async operations
+- Metric collection and custom spans
+- TypeScript support and best practices
+
 ## 📦 Installation
 
 To use this plugin in Claude Code:
@@ -53,9 +69,13 @@ Once installed, the plugin provides expert guidance when you ask Claude about Op
 **Example prompts:**
 - "How do I instrument my Java Spring Boot application with OpenTelemetry?"
 - "Show me how to add tracing to a Go HTTP service"
+- "How do I set up OpenTelemetry in a Next.js application?"
+- "How do I instrument a React application with OpenTelemetry?"
+- "Show me how to add automatic instrumentation to my Node.js Express app"
 - "How do I configure OpenTelemetry to export to Jaeger?"
 - "What's the best way to add custom metrics to my Java application?"
 - "How do I propagate trace context across microservices in Go?"
+- "How do I instrument GraphQL with OpenTelemetry in Node.js?"
 
 ### Using the Instrument Command
 
@@ -86,10 +106,14 @@ Learn more about Claude Code skills at [https://code.claude.com/docs/en/skills](
     │   ├── skill.json               # Java skill configuration
     │   ├── knowledge.md             # Java instrumentation guide
     │   └── examples.md              # Java code examples
-    └── opentelemetry-go/            # Go skill
-        ├── skill.json               # Go skill configuration
-        ├── knowledge.md             # Go instrumentation guide
-        └── examples.md              # Go code examples
+    ├── opentelemetry-go/            # Go skill
+    │   ├── skill.json               # Go skill configuration
+    │   ├── knowledge.md             # Go instrumentation guide
+    │   └── examples.md              # Go code examples
+    └── opentelemetry-js/            # JavaScript/TypeScript skill
+        ├── skill.json               # JavaScript skill configuration
+        ├── knowledge.md             # JavaScript instrumentation guide
+        └── examples.md              # JavaScript code examples
 ```
 
 ## 🤖 GitHub Actions Integration
@@ -201,6 +225,22 @@ For more information on skills and commands, see the [Claude Code Skills Documen
 - Best practices for production
 - Troubleshooting and debugging
 
+### JavaScript Instrumentation Knowledge
+
+- Node.js automatic and manual instrumentation
+- Browser-based instrumentation
+- React component tracing
+- Next.js instrumentation hooks
+- Express.js middleware
+- TypeScript configuration
+- NPM package dependencies
+- Database instrumentation (PostgreSQL, MongoDB, MySQL)
+- GraphQL server instrumentation
+- Context propagation in async/await
+- Custom metrics and spans
+- Sampling strategies
+- Production best practices
+
 ## 🎓 Supported Use Cases
 
 - Adding observability to new applications
@@ -227,6 +267,7 @@ Contributions are welcome! Please feel free to submit pull requests with:
 - [OpenTelemetry Official Documentation](https://opentelemetry.io/docs/)
 - [OpenTelemetry Java](https://github.com/open-telemetry/opentelemetry-java)
 - [OpenTelemetry Go](https://github.com/open-telemetry/opentelemetry-go)
+- [OpenTelemetry JavaScript](https://github.com/open-telemetry/opentelemetry-js)
 - [OpenTelemetry Specification](https://github.com/open-telemetry/opentelemetry-specification)
 
 ## 📄 License
