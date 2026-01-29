@@ -1,0 +1,52 @@
+name: Validate Plugin
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: Validate plugin structure
+        run: |
+          echo "Running plugin validation..."
+          python3 validate-marketplace.py
+      
+      - name: Check plugin.json is valid JSON
+        run: |
+          echo "Validating plugin.json syntax..."
+          python3 -m json.tool .claude/plugin.json > /dev/null
+          echo "✓ plugin.json is valid JSON"
+      
+      - name: Verify all skills exist
+        run: |
+          echo "Checking skill directories..."
+          for skill in opentelemetry-java opentelemetry-go opentelemetry-js opentelemetry-rust; do
+            if [ -d ".claude/skills/$skill" ]; then
+              echo "✓ Skill directory found: $skill"
+            else
+              echo "✗ Skill directory missing: $skill"
+              exit 1
+            fi
+            
+            if [ -f ".claude/skills/$skill/SKILL.md" ]; then
+              echo "  ✓ SKILL.md found for $skill"
+            else
+              echo "  ✗ SKILL.md missing for $skill"
+              exit 1
+            fi
+          done
+          echo "✓ All skills validated"
