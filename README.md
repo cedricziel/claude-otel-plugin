@@ -71,11 +71,26 @@ Expert knowledge for instrumenting JavaScript and TypeScript applications with O
 
 ## 📦 Installation
 
-To use this plugin in Claude Code:
+### From the Claude Marketplace (Recommended)
+
+Install this plugin directly from the Claude Code marketplace:
+
+1. Open Claude Code
+2. Navigate to the Plugin Marketplace
+3. Search for "OpenTelemetry Instrumentation Assistant"
+4. Click "Install"
+
+The plugin will be automatically available in all your projects.
+
+### Manual Installation
+
+Alternatively, you can install the plugin manually:
 
 1. Clone this repository or download the plugin files
 2. Place the `.claude` directory in your project root, or
 3. Configure Claude Code to load the plugin from this repository
+
+For more information on installing plugins, see the [Claude Code Plugin Documentation](https://code.claude.com/docs/en/plugin-marketplaces)
 
 ## 🎯 Usage
 
