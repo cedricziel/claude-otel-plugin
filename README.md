@@ -313,6 +313,26 @@ Contributions are welcome! Please feel free to submit pull requests with:
 - Bug fixes or corrections
 - Documentation improvements
 
+### Plugin Validation
+
+Before submitting changes, you can validate the plugin structure using the included validation script:
+
+```bash
+python3 validate-marketplace.py
+```
+
+This will check that all required files and metadata are present for marketplace publishing.
+
+## 📦 Marketplace Publishing
+
+This plugin is available on the Claude Code marketplace. The plugin structure follows the [Claude Code Plugin Marketplace](https://code.claude.com/docs/en/plugin-marketplaces) specifications with:
+
+- ✓ Complete marketplace metadata in `plugin.json`
+- ✓ MIT License for open-source distribution
+- ✓ Comprehensive documentation
+- ✓ Four specialized skills for different programming languages
+- ✓ Custom `/instrument` command for guided instrumentation
+
 ## 📖 Resources
 
 - [OpenTelemetry Official Documentation](https://opentelemetry.io/docs/)
@@ -324,7 +344,7 @@ Contributions are welcome! Please feel free to submit pull requests with:
 
 ## 📄 License
 
-This plugin is provided as-is for use with Claude Code. Please refer to the LICENSE file for details.
+This plugin is available under the MIT License. See the [LICENSE](LICENSE) file for full details.
 
 ## 🙏 Acknowledgments
 
