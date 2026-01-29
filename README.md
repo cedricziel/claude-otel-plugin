@@ -353,13 +353,13 @@ python3 validate-marketplace.py
 
 This will check that all required files and metadata are present for marketplace publishing.
 
-**Automated Validation**: All pull requests and commits are automatically validated using GitHub Actions. The workflow checks:
+**Automated Validation**: All pull requests and commits to the main branch are automatically validated using GitHub Actions. The workflow checks:
 - Plugin structure and required files
 - Valid JSON syntax in `plugin.json`
 - Presence of all skill directories and files
 - Marketplace metadata completeness
 
-See the validation status in the Actions tab of the repository.
+Contributors can see the validation status in the [Actions tab](https://github.com/cedricziel/claude-otel-plugin/actions) of this repository. The badge at the top of this README shows the validation status of the main branch.
 
 ## 📦 Marketplace Publishing
 

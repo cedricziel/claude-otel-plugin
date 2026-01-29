@@ -20,33 +20,9 @@ jobs:
         with:
           python-version: '3.x'
       
-      - name: Validate plugin structure
+      - name: Run plugin validation
         run: |
-          echo "Running plugin validation..."
+          echo "Running comprehensive plugin validation..."
           python3 validate-marketplace.py
-      
-      - name: Check plugin.json is valid JSON
-        run: |
-          echo "Validating plugin.json syntax..."
-          python3 -m json.tool .claude/plugin.json > /dev/null
-          echo "✓ plugin.json is valid JSON"
-      
-      - name: Verify all skills exist
-        run: |
-          echo "Checking skill directories..."
-          for skill in opentelemetry-java opentelemetry-go opentelemetry-js opentelemetry-rust; do
-            if [ -d ".claude/skills/$skill" ]; then
-              echo "✓ Skill directory found: $skill"
-            else
-              echo "✗ Skill directory missing: $skill"
-              exit 1
-            fi
-            
-            if [ -f ".claude/skills/$skill/SKILL.md" ]; then
-              echo "  ✓ SKILL.md found for $skill"
-            else
-              echo "  ✗ SKILL.md missing for $skill"
-              exit 1
-            fi
-          done
-          echo "✓ All skills validated"
+          echo ""
+          echo "✓ All validation checks passed!"
