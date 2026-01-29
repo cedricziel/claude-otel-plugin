@@ -90,7 +90,7 @@ Alternatively, you can install the plugin manually:
 2. Place the `.claude` directory in your project root, or
 3. Configure Claude Code to load the plugin from this repository
 
-For more information on installing plugins, see the [Claude Code Plugin Documentation](https://code.claude.com/docs/en/plugin-marketplaces)
+For more information on installing plugins, see the [Claude Code Plugin Documentation](https://code.claude.com/docs/)
 
 ## 🎯 Usage
 
@@ -325,7 +325,7 @@ This will check that all required files and metadata are present for marketplace
 
 ## 📦 Marketplace Publishing
 
-This plugin is available on the Claude Code marketplace. The plugin structure follows the [Claude Code Plugin Marketplace](https://code.claude.com/docs/en/plugin-marketplaces) specifications with:
+This plugin is available on the Claude Code marketplace. The plugin structure follows the Claude Code Plugin specifications with:
 
 - ✓ Complete marketplace metadata in `plugin.json`
 - ✓ MIT License for open-source distribution
