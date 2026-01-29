@@ -73,11 +73,19 @@ Expert knowledge for instrumenting JavaScript and TypeScript applications with O
 
 ## 📦 Installation
 
-This plugin can be installed in two ways: from the Claude Code marketplace for easy one-click installation, or manually for local development and testing.
+This plugin can be installed in multiple ways: via CLI for quick installation, from the Claude Code marketplace UI, or manually for local development.
 
-### Option 1: Install from Claude Code Marketplace (Recommended)
+### Option 1: Install via CLI (Quickest)
 
-The easiest way to use this plugin is to install it from the Claude Code marketplace:
+```bash
+claude marketplace add cedricziel/claude-otel-plugin
+```
+
+This command installs the plugin globally and makes it available across all your Claude Code sessions.
+
+### Option 2: Install from Claude Code Marketplace UI
+
+Install this plugin directly from the Claude Code marketplace interface:
 
 1. **Open Claude Code** on your desktop
 2. **Access the Plugin Marketplace**:
@@ -87,9 +95,9 @@ The easiest way to use this plugin is to install it from the Claude Code marketp
 4. **Click "Install"** on the plugin card
 5. **Start using**: The plugin will be automatically available in all your projects
 
-Once installed from the marketplace, the plugin updates automatically and is available globally across all your Claude Code sessions.
+Once installed from the marketplace (via CLI or UI), the plugin updates automatically and is available globally across all your Claude Code sessions.
 
-### Option 2: Manual Installation (For Development)
+### Option 3: Manual Installation (For Development)
 
 If you want to contribute to the plugin or test local changes:
 
