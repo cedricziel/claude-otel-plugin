@@ -6,6 +6,12 @@
     "name": "Cedric Ziel",
     "url": "https://github.com/cedricziel/claude-otel-plugin"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cedricziel/claude-otel-plugin"
+  },
+  "homepage": "https://github.com/cedricziel/claude-otel-plugin",
   "skills": [
     {
       "name": "opentelemetry-java",

@@ -1,5 +1,7 @@
 # OpenTelemetry Instrumentation Plugin for Claude Code
 
+[![Validate Plugin](https://github.com/cedricziel/claude-otel-plugin/actions/workflows/validate-plugin.yml/badge.svg)](https://github.com/cedricziel/claude-otel-plugin/actions/workflows/validate-plugin.yml)
+
 A Claude Code plugin that provides expert guidance for instrumenting applications with OpenTelemetry SDKs. This plugin helps developers add observability to their Java, Go, Rust, and JavaScript/TypeScript applications through traces, metrics, and logs.
 
 ## 📊 Features
@@ -71,11 +73,62 @@ Expert knowledge for instrumenting JavaScript and TypeScript applications with O
 
 ## 📦 Installation
 
-To use this plugin in Claude Code:
+This plugin can be installed in multiple ways: via CLI for quick installation, from the Claude Code marketplace UI, or manually for local development.
 
-1. Clone this repository or download the plugin files
-2. Place the `.claude` directory in your project root, or
-3. Configure Claude Code to load the plugin from this repository
+### Option 1: Install via CLI (Quickest)
+
+```bash
+claude marketplace add cedricziel/claude-otel-plugin
+```
+
+This command installs the plugin globally and makes it available across all your Claude Code sessions.
+
+### Option 2: Install from Claude Code Marketplace UI
+
+Install this plugin directly from the Claude Code marketplace interface:
+
+1. **Open Claude Code** on your desktop
+2. **Access the Plugin Marketplace**:
+   - Click on the plugins icon in the sidebar, or
+   - Use the command palette (Cmd/Ctrl + Shift + P) and search for "Plugins"
+3. **Search for the plugin**: Type "OpenTelemetry Instrumentation Assistant" in the search bar
+4. **Click "Install"** on the plugin card
+5. **Start using**: The plugin will be automatically available in all your projects
+
+Once installed from the marketplace (via CLI or UI), the plugin updates automatically and is available globally across all your Claude Code sessions.
+
+### Option 3: Manual Installation (For Development)
+
+If you want to contribute to the plugin or test local changes:
+
+#### Method A: Clone to Project Directory
+
+```bash
+# Clone the repository
+git clone https://github.com/cedricziel/claude-otel-plugin.git
+
+# Copy the .claude directory to your project root
+cp -r claude-otel-plugin/.claude /path/to/your/project/
+```
+
+#### Method B: Use Git Submodule
+
+```bash
+# Navigate to your project
+cd /path/to/your/project
+
+# Add as a submodule
+git submodule add https://github.com/cedricziel/claude-otel-plugin.git .claude-plugins/otel
+
+# Create a symbolic link (optional)
+ln -s .claude-plugins/otel/.claude .claude
+```
+
+#### Method C: Direct Repository Reference
+
+You can reference this plugin directly from the repository in your Claude Code configuration. See the [Claude Code Plugin Documentation](https://code.claude.com/docs/) for details on configuring remote plugins.
+
+**Note**: Manual installations are project-specific and won't be available in other projects unless you repeat the installation steps.
 
 ## 🎯 Usage
 
@@ -298,6 +351,35 @@ Contributions are welcome! Please feel free to submit pull requests with:
 - Bug fixes or corrections
 - Documentation improvements
 
+### Plugin Validation
+
+Before submitting changes, you can validate the plugin structure locally:
+
+```bash
+python3 validate-marketplace.py
+```
+
+This will check that all required files and metadata are present for marketplace publishing.
+
+**Automated Validation**: All pull requests and commits to the main branch are automatically validated using GitHub Actions. The workflow checks:
+- Plugin structure and required files
+- Valid JSON syntax in `plugin.json`
+- Presence of all skill directories and files
+- Marketplace metadata completeness
+
+Contributors can see the validation status in the [Actions tab](https://github.com/cedricziel/claude-otel-plugin/actions) of this repository. The badge at the top of this README shows the validation status of the main branch.
+
+## 📦 Marketplace Publishing
+
+This plugin is available on the Claude Code marketplace. The plugin structure follows the Claude Code Plugin specifications with:
+
+- ✓ Complete marketplace metadata in `plugin.json`
+- ✓ MIT License for open-source distribution
+- ✓ Comprehensive documentation
+- ✓ Four specialized skills for different programming languages
+- ✓ Custom `/instrument` command for guided instrumentation
+- ✓ Automated validation via GitHub Actions
+
 ## 📖 Resources
 
 - [OpenTelemetry Official Documentation](https://opentelemetry.io/docs/)
@@ -309,7 +391,7 @@ Contributions are welcome! Please feel free to submit pull requests with:
 
 ## 📄 License
 
-This plugin is provided as-is for use with Claude Code. Please refer to the LICENSE file for details.
+This plugin is available under the MIT License. See the [LICENSE](LICENSE) file for full details.
 
 ## 🙏 Acknowledgments
 
