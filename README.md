@@ -1,11 +1,11 @@
 # OpenTelemetry Instrumentation Plugin for Claude Code
 
-A Claude Code plugin that provides expert guidance for instrumenting applications with OpenTelemetry SDKs. This plugin helps developers add observability to their Java, Go, and JavaScript/TypeScript applications through traces, metrics, and logs.
+A Claude Code plugin that provides expert guidance for instrumenting applications with OpenTelemetry SDKs. This plugin helps developers add observability to their Java, Go, Rust, and JavaScript/TypeScript applications through traces, metrics, and logs.
 
 ## 📊 Features
 
 - **Expert Knowledge**: Comprehensive guidance on OpenTelemetry instrumentation
-- **Multi-Language Support**: Dedicated skills for Java, Go, and JavaScript/TypeScript
+- **Multi-Language Support**: Dedicated skills for Java, Go, Rust, and JavaScript/TypeScript
 - **Best Practices**: Industry-standard patterns and conventions
 - **Practical Examples**: Real-world code examples and patterns
 - **Complete Coverage**: Manual and automatic instrumentation approaches
@@ -39,6 +39,21 @@ Expert knowledge for instrumenting Go applications with OpenTelemetry, including
 - Metric collection and recording
 - Best practices for production deployments
 
+### OpenTelemetry Rust
+
+Expert knowledge for instrumenting Rust applications with OpenTelemetry, including:
+
+- Manual instrumentation with OpenTelemetry Rust API
+- SDK configuration and initialization
+- HTTP server and client instrumentation (Axum, Actix, etc.)
+- Integration with the `tracing` crate ecosystem
+- Database instrumentation patterns (SQLx, Diesel)
+- Async runtime integration (Tokio)
+- Metric collection and recording
+- OTLP exporters (HTTP and gRPC)
+- Context propagation in async code
+- Best practices for production deployments
+
 ### OpenTelemetry JavaScript
 
 Expert knowledge for instrumenting JavaScript and TypeScript applications with OpenTelemetry, including:
@@ -69,6 +84,7 @@ Once installed, the plugin provides expert guidance when you ask Claude about Op
 **Example prompts:**
 - "How do I instrument my Java Spring Boot application with OpenTelemetry?"
 - "Show me how to add tracing to a Go HTTP service"
+- "How do I set up OpenTelemetry in a Rust application using Axum?"
 - "How do I set up OpenTelemetry in a Next.js application?"
 - "How do I instrument a React application with OpenTelemetry?"
 - "Show me how to add automatic instrumentation to my Node.js Express app"
@@ -87,7 +103,7 @@ The plugin includes an `instrument` command that guides you through the complete
 
 When you run this command, Claude will:
 1. Analyze your codebase to identify the programming language
-2. Automatically activate the appropriate OpenTelemetry skill (Java or Go)
+2. Automatically activate the appropriate OpenTelemetry skill (Java, Go, Rust, or JavaScript/TypeScript)
 3. Review your application architecture
 4. Identify key instrumentation points (HTTP endpoints, database queries, external services, etc.)
 5. Provide specific recommendations for automatic and manual instrumentation
@@ -110,6 +126,10 @@ Learn more about Claude Code skills at [https://code.claude.com/docs/en/skills](
     │   ├── skill.json               # Go skill configuration
     │   ├── knowledge.md             # Go instrumentation guide
     │   └── examples.md              # Go code examples
+    ├── opentelemetry-rust/          # Rust skill
+    │   ├── skill.json               # Rust skill configuration
+    │   ├── knowledge.md             # Rust instrumentation guide
+    │   └── examples.md              # Rust code examples
     └── opentelemetry-js/            # JavaScript/TypeScript skill
         ├── skill.json               # JavaScript skill configuration
         ├── knowledge.md             # JavaScript instrumentation guide
@@ -190,6 +210,8 @@ The plugin's skills are automatically activated when Claude detects relevant con
 
 - **opentelemetry-java**: Activated when working with Java files (`.java`, `pom.xml`, `build.gradle`)
 - **opentelemetry-go**: Activated when working with Go files (`.go`, `go.mod`)
+- **opentelemetry-rust**: Activated when working with Rust files (`.rs`, `Cargo.toml`)
+- **opentelemetry-js**: Activated when working with JavaScript/TypeScript files (`.js`, `.ts`, `package.json`)
 
 You can also explicitly invoke skills in your prompts:
 ```
@@ -223,6 +245,20 @@ For more information on skills and commands, see the [Claude Code Skills Documen
 - Context propagation in goroutines
 - Metric collection patterns
 - Best practices for production
+- Troubleshooting and debugging
+
+### Rust Instrumentation Knowledge
+
+- OpenTelemetry SDK initialization
+- Tracer and meter setup
+- HTTP server instrumentation (Axum, Actix-web)
+- HTTP client instrumentation (reqwest)
+- Database instrumentation (SQLx, Diesel)
+- Integration with `tracing` crate
+- Context propagation in async code
+- Metric collection patterns
+- OTLP exporters (HTTP and gRPC)
+- Best practices for Rust applications
 - Troubleshooting and debugging
 
 ### JavaScript Instrumentation Knowledge
@@ -267,6 +303,7 @@ Contributions are welcome! Please feel free to submit pull requests with:
 - [OpenTelemetry Official Documentation](https://opentelemetry.io/docs/)
 - [OpenTelemetry Java](https://github.com/open-telemetry/opentelemetry-java)
 - [OpenTelemetry Go](https://github.com/open-telemetry/opentelemetry-go)
+- [OpenTelemetry Rust](https://github.com/open-telemetry/opentelemetry-rust)
 - [OpenTelemetry JavaScript](https://github.com/open-telemetry/opentelemetry-js)
 - [OpenTelemetry Specification](https://github.com/open-telemetry/opentelemetry-specification)
 
